@@ -354,10 +354,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="extras-tabs">
     <button class="ext-tab" onclick="setExt('autos')">🚗 <span class="t" data-es="Autos" data-en="Cars" data-pt="Carros">Autos</span></button>
     <button class="ext-tab" onclick="setExt('colectivos')">🚌 <span class="t" data-es="Colectivos" data-en="Buses" data-pt="Ônibus">Colectivos</span></button>
-    <button class="ext-tab" onclick="setExt('temporadas')">🍂 <span class="t" data-es="Temporadas" data-en="Seasons" data-pt="Estações">Temporadas</span></button>
-    <button class="ext-tab" onclick="setExt('tips')">🧠 <span class="t" data-es="Tips locales" data-en="Local tips" data-pt="Dicas locais">Tips locales</span></button>
-    <button class="ext-tab" onclick="setExt('ski')">⛷️ Ski & Snow</button>
     <button class="ext-tab" onclick="setExt('supers')">🛒 <span class="t" data-es="Súpers" data-en="Supermarkets" data-pt="Supermercados">Súpers</span></button>
+    <button class="ext-tab" onclick="setExt('tips')">🧠 <span class="t" data-es="Tips locales" data-en="Local tips" data-pt="Dicas locais">Tips locales</span></button>
+    <button class="ext-tab" onclick="setExt('temporadas')">🍂 <span class="t" data-es="Temporadas" data-en="Seasons" data-pt="Estações">Temporadas</span></button>
+    <button class="ext-tab" onclick="setExt('ski')">⛷️ Ski & Snow</button>
     <button class="ext-tab" onclick="setExt('emergencias')">🆘 <span class="t" data-es="Emergencias" data-en="Emergencies" data-pt="Emergências">Emergencias</span></button>
   </div>
 
@@ -606,11 +606,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <div class="tabs-wrap">
   <div class="tabs">
-    <button class="tab" onclick="setTab('atracciones')">⛰️ <span class="t" data-es="Atracciones" data-en="Attractions" data-pt="Atrações">Atracciones</span></button>
     <button class="tab" onclick="setTab('restaurantes')">🍽️ <span class="t" data-es="Restaurantes" data-en="Restaurants" data-pt="Restaurantes">Restaurantes</span></button>
     <button class="tab" onclick="setTab('cervecerias')">🍺 <span class="t" data-es="Cervezas" data-en="Breweries" data-pt="Cervejas">Cervezas</span></button>
-    <button class="tab" onclick="setTab('salir')">🎶 <span class="t" data-es="Salir" data-en="Nightlife" data-pt="Sair">Salir</span></button>
     <button class="tab" onclick="setTab('tiendas')">🍫 <span class="t" data-es="Chocolaterías" data-en="Chocolate" data-pt="Chocolates">Chocolaterías</span></button>
+    <button class="tab" onclick="setTab('atracciones')">⛰️ <span class="t" data-es="Atracciones" data-en="Attractions" data-pt="Atrações">Atracciones</span></button>
+    <button class="tab" onclick="setTab('salir')">🎶 <span class="t" data-es="Salir" data-en="Nightlife" data-pt="Sair">Salir</span></button>
   </div>
 </div>
 
@@ -1180,7 +1180,7 @@ function renderWeather(lang){
   for(let i=1;i<4;i++){const dt=new Date(day.time[i]+'T12:00:00');fc+=`<div class="fc-day"><div class="fc-label">${days[dt.getDay()]}</div><div class="fc-icon">${gi(day.weather_code[i])}</div><div class="fc-hi">${Math.round(day.temperature_2m_max[i])}°</div><div class="fc-lo">${Math.round(day.temperature_2m_min[i])}°</div></div>`;}
   const nowLabel={es:'Bariloche ahora',en:'Bariloche now',pt:'Bariloche agora'}[lang]||'Bariloche ahora';
   const windLabel={es:'Viento',en:'Wind',pt:'Vento'}[lang]||'Viento';
-  document.getElementById('weather-content').innerHTML=`<div class="weather-now"><div><div class="weather-temp">${Math.round(cur.temperature_2m)}°C</div><div style="font-size:11px;color:#6b7280;margin-top:2px">${nowLabel}</div></div><div class="weather-info"><div class="weather-desc">${gi(cur.weather_code)} ${wc[cur.weather_code]||'Variable'}</div><div class="weather-wind">💨 ${Math.round(cur.wind_speed_10m)} km/h</div></div></div><div class="weather-forecast">${fc}</div>`;
+  const wc_el=document.getElementById('weather-content');if(wc_el)wc_el.innerHTML=`<div class="weather-now"><div><div class="weather-temp">${Math.round(cur.temperature_2m)}°C</div><div style="font-size:11px;color:#6b7280;margin-top:2px">${nowLabel}</div></div><div class="weather-info"><div class="weather-desc">${gi(cur.weather_code)} ${wc[cur.weather_code]||'Variable'}</div><div class="weather-wind">💨 ${Math.round(cur.wind_speed_10m)} km/h</div></div></div><div class="weather-forecast">${fc}</div>`;
   const wt=document.getElementById('outfit-weather-text');if(wt)wt.textContent=`${Math.round(cur.temperature_2m)}°C · ${wc[cur.weather_code]||'Variable'}`;
   const ws=document.getElementById('outfit-weather-sub');if(ws)ws.textContent=`💨 ${windLabel} ${Math.round(cur.wind_speed_10m)} km/h`;
 }
