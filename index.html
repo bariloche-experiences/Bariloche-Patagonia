@@ -181,12 +181,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <div style="padding:1.2rem 1.5rem 0.5rem">
   <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#cbd5e1;margin-bottom:8px;text-align:center" id="depto-label">¿Cuál es tu departamento?</div>
   <div class="depto-tabs">
-    <button class="depto-btn active" onclick="setDepto('d1')">🏠 Lake View Apt</button>
-    <button class="depto-btn" onclick="setDepto('d2')">🏠 Lake View Apt 2</button>
+    <button class="depto-btn active" onclick="setDepto('d1')">🏠 Lake View 1</button>
+    <button class="depto-btn" onclick="setDepto('d2')">🏠 Lake View 2</button>
   </div>
   <div id="welcome-msg" style="margin-top:12px;background:linear-gradient(135deg,rgba(16,185,129,0.12),rgba(37,99,235,0.10));border:1.5px solid rgba(16,185,129,0.45);border-radius:16px;padding:18px 16px;text-align:center;box-shadow:0 0 24px rgba(16,185,129,0.1)">
     <div style="font-size:28px;margin-bottom:6px">🏔️</div>
-    <div style="font-size:17px;font-weight:900;color:#fff;margin-bottom:5px;letter-spacing:-0.3px" id="welcome-title">Bienvenidos al Lake View</div>
+    <div style="font-size:17px;font-weight:900;color:#fff;margin-bottom:5px;letter-spacing:-0.3px" id="welcome-title">Bienvenidos al Lake View 1</div>
     <div style="font-size:13px;color:#a7f3d0;font-weight:500;font-style:italic" id="welcome-sub">El lago Nahuel Huapi está a 200 metros de tu puerta</div>
   </div>
 
@@ -224,11 +224,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="sec-title green">📹 Check-in · <span class="t" data-es="Cómo ingresar" data-en="How to check in" data-pt="Como entrar">Cómo ingresar</span></div>
   <div class="depto-group visible" id="dep-d1">
     <div class="video-block visible" id="vd1-es">
-      <div class="video-label"><strong>Lake View · Depto 1</strong><span id="vd1-es-label">Estacionamiento, ubicación y llaves</span></div>
+      <div class="video-label"><strong>Lake View 1 · Depto 1</strong><span id="vd1-es-label">Estacionamiento, ubicación y llaves</span></div>
       <div class="video-wrap"><iframe src="https://www.youtube.com/embed/WeS2YTzyC5o" allowfullscreen allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"></iframe></div>
     </div>
     <div class="video-block" id="vd1-en">
-      <div class="video-label"><strong>Lake View · Apt 1</strong>Parking, location &amp; keys</div>
+      <div class="video-label"><strong>Lake View 1 · Apt 1</strong>Parking, location &amp; keys</div>
       <div class="video-wrap"><iframe src="https://www.youtube.com/embed/Y1rbaEYxRJQ" allowfullscreen allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"></iframe></div>
     </div>
     <div class="steps">
@@ -285,7 +285,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div id="wifi-d1">
     <div class="wifi-card">
       <div class="wifi-icon"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><circle cx="12" cy="20" r="1" fill="#60a5fa" stroke="none"/></svg></div>
-      <div><div class="wifi-apt">Lake View · Depto 1</div><div class="wifi-ssid">PEDRO</div><div class="wifi-pass">Password: <span>pedropedro</span></div></div>
+      <div><div class="wifi-apt">Lake View 1 · Depto 1</div><div class="wifi-ssid">PEDRO</div><div class="wifi-pass">Password: <span>pedropedro</span></div></div>
     </div>
     <button class="wifi-qr-btn" onclick="toggleQR('qr1')">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM17 17h3v3h-3zM14 20h3"/></svg>
@@ -1206,7 +1206,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <div class="footer">
   <div class="footer-logo">Bariloche Experiencias</div>
   <strong style="color:#6b7280;display:block;font-size:13px;margin-bottom:6px">La Florida 3566 · San Carlos de Bariloche</strong>
-  Beautiful Lake View (Depto 1) · Beautiful Lake View 2 (Depto 3)<br><br>
+  Beautiful Lake View 1 (Depto 1) · Beautiful Lake View 2 (Depto 3)<br><br>
   <a href="https://www.instagram.com/bariloche.experiences?igsh=eGdiZXQ2OXBlcWFr" target="_blank" style="color:#a78bfa;text-decoration:none;font-weight:600">@bariloche.experiences</a>
   <div style="margin-top:12px;font-size:12px;color:#94a3b8" id="footer-wa-msg">Contactanos por cualquier duda — respondemos rápido 🙌</div>
 </div>
@@ -1326,9 +1326,9 @@ function updateWelcome(){
   const lang=currentLang;
   const welcome={
     d1:{
-      es:{title:'Bienvenidos al Lake View 🏔️',sub:'El lago Nahuel Huapi está a 200 metros de tu puerta'},
-      en:{title:'Welcome to Lake View 🏔️',sub:'Lake Nahuel Huapi is 200 meters from your door'},
-      pt:{title:'Bem-vindos ao Lake View 🏔️',sub:'O lago Nahuel Huapi está a 200 metros da sua porta'}
+      es:{title:'Bienvenidos al Lake View 1 🏔️',sub:'El lago Nahuel Huapi está a 200 metros de tu puerta'},
+      en:{title:'Welcome to Lake View 1 🏔️',sub:'Lake Nahuel Huapi is 200 meters from your door'},
+      pt:{title:'Bem-vindos ao Lake View 1 🏔️',sub:'O lago Nahuel Huapi está a 200 metros da sua porta'}
     },
     d2:{
       es:{title:'Bienvenidos al Lake View 2 🏔️',sub:'El centro de Bariloche a pasos, el lago a la vuelta'},
