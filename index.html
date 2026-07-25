@@ -390,7 +390,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   </div>
   <button class="ext-tab" onclick="setExt('ninos')" style="width:100%;display:flex;align-items:center;justify-content:space-between;font-size:16px;font-weight:800;padding:18px 22px;border-color:rgba(251,146,60,0.55);background:rgba(251,146,60,0.08);color:#fdba74">
     <span>👨‍👩‍👧‍👦 <span class="t" data-es="Actividades para Niños" data-en="Activities for Kids" data-pt="Atividades para Crianças">Actividades para Niños</span></span>
-    <span style="font-size:12px;opacity:0.65">11 <span class="t" data-es="actividades ▾" data-en="activities ▾" data-pt="atividades ▾">actividades ▾</span></span>
+    <span style="font-size:12px;opacity:0.65" class="t" data-es="4 + 7 más ▾" data-en="4 + 7 more ▾" data-pt="4 + 7 mais ▾">4 + 7 más ▾</span>
   </button>
 </div>
 <div class="ext-group" id="ext-ninos">
@@ -688,6 +688,26 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <!-- SKI & SNOW RENTALS -->
   <div class="ext-group" id="ext-ski">
     <div class="service-card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <div style="font-size:22px">⛷️</div>
+        <div>
+          <div style="font-size:14px;font-weight:800;color:#fff" id="catedral-title">Cerro Catedral — Estado en tiempo real</div>
+          <div style="font-size:11px;color:#93c5fd;font-weight:600" id="catedral-sub">Nieve · Pistas · Condiciones del día</div>
+        </div>
+      </div>
+      <div style="font-size:12px;color:#e2e8f0;line-height:1.5;margin-bottom:12px" id="catedral-desc">Antes de ir al cerro, revisá el parte de nieve oficial — cuántas pistas están abiertas, centímetros de nieve fresca y estado de las remontes.</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">
+        <a href="https://www.catedralaltapatagonia.com/invierno/partes-de-nieve/" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#1d4ed8,#2563eb);color:#fff;font-size:13px;font-weight:800;padding:12px;border-radius:12px;text-decoration:none">
+          🌨️ <span id="catedral-btn1">Ver parte de nieve oficial</span>
+        </a>
+        <a href="https://www.catedralaltapatagonia.com/invierno/estado-de-pistas/" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.4);color:#bfdbfe;font-size:13px;font-weight:700;padding:12px;border-radius:12px;text-decoration:none">
+          🗺️ <span id="catedral-btn2">Estado de pistas del día</span>
+        </a>
+        <a href="https://www.catedralaltapatagonia.com/webcam/" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.35);color:#6ee7b7;font-size:13px;font-weight:700;padding:12px;border-radius:12px;text-decoration:none">
+          📷 <span id="catedral-btn3">Webcam en vivo del cerro</span>
+        </a>
+      </div>
+      <div style="height:1px;background:#21262d;margin:4px 0 14px"></div>
       <div style="font-size:12px;color:#7dd3fc;margin-bottom:14px;line-height:1.5"><span class="t" data-es="⛷️ Alquiler de equipo completo: esquís, tablas de snow, bastones, botas y casco. Los mejores locales de Bariloche según Google." data-en="⛷️ Full equipment rental: skis, snowboards, poles, boots and helmet. Bariloche's top shops according to Google." data-pt="⛷️ Aluguel de equipamento completo: esquis, pranchas de snow, bastões, botas e capacete. Os melhores locais de Bariloche segundo o Google.">⛷️ Alquiler de equipo completo: esquís, tablas de snow, bastones, botas y casco. Los mejores locales de Bariloche según Google.</span></div>
 
       <div class="bus-row" style="padding:10px 0">
@@ -1103,33 +1123,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div id="outfit-tip" style="font-size:12px;color:#60a5fa;margin-top:10px;font-style:italic;border-top:1px solid #21262d;padding-top:8px"></div>
   </div>
 </div>
-
-<div style="padding:0 1.5rem 1.5rem">
-  <div style="background:linear-gradient(135deg,#0a1628 0%,#0d2040 100%);border:1.5px solid rgba(147,197,253,0.4);border-radius:20px;padding:1.4rem;position:relative;overflow:hidden">
-    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(147,197,253,0.08) 0%,transparent 60%)"></div>
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;position:relative">
-      <div style="font-size:28px">⛷️</div>
-      <div>
-        <div style="font-size:15px;font-weight:900;color:#fff" id="catedral-title">Cerro Catedral — Estado en tiempo real</div>
-        <div style="font-size:11px;color:#93c5fd;font-weight:600" id="catedral-sub">Nieve · Pistas · Condiciones del día</div>
-      </div>
-    </div>
-    <div style="font-size:13px;color:#e2e8f0;line-height:1.6;margin-bottom:14px;position:relative" id="catedral-desc">Antes de ir al cerro, revisá el parte de nieve oficial — cuántas pistas están abiertas, centímetros de nieve fresca y estado de las remontes.</div>
-    <div style="display:flex;flex-direction:column;gap:8px;position:relative">
-      <a href="https://www.catedralaltapatagonia.com/invierno/partes-de-nieve/" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#1d4ed8,#2563eb);color:#fff;font-size:13px;font-weight:800;padding:13px;border-radius:12px;text-decoration:none">
-        🌨️ <span id="catedral-btn1">Ver parte de nieve oficial</span>
-      </a>
-      <a href="https://www.catedralaltapatagonia.com/invierno/estado-de-pistas/" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.4);color:#bfdbfe;font-size:13px;font-weight:700;padding:12px;border-radius:12px;text-decoration:none">
-        🗺️ <span id="catedral-btn2">Estado de pistas del día</span>
-      </a>
-      <a href="https://www.catedralaltapatagonia.com/webcam/" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.35);color:#6ee7b7;font-size:13px;font-weight:700;padding:12px;border-radius:12px;text-decoration:none">
-        📷 <span id="catedral-btn3">Webcam en vivo del cerro</span>
-      </a>
-    </div>
-  </div>
-</div>
-
-<div style="height:1px;background:linear-gradient(90deg,transparent,#21262d,transparent);margin:0 1.5rem 1.5rem"></div>
 
 <!-- CONVERSOR DE MONEDA -->
 <div style="padding:0 1.5rem 1.5rem">
