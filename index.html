@@ -20,7 +20,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 60%,rgba(37,99,235,0.18) 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(16,185,129,0.12) 0%,transparent 50%)}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.35);color:#6ee7b7;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:1.2rem;position:relative}
 .hero h1{font-size:2.6rem;font-weight:900;line-height:1.05;background:linear-gradient(135deg,#a7f3d0 0%,#34d399 55%,#059669 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.4rem;position:relative}
-.hero-sub{font-size:0.9rem;color:#cbd5e1;position:relative;margin-bottom:1.6rem}
 .lang-bar{display:flex;gap:8px;justify-content:center;position:relative}
 .lang-btn{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:#e2e8f0;font-size:15px;font-weight:600;padding:9px 24px;border-radius:20px;cursor:pointer;transition:all 0.2s}
 .lang-btn.active,.lang-btn:hover{background:#2563eb;border-color:#2563eb;color:#fff}
@@ -1242,14 +1241,13 @@ function setLang(lang){
     const ig=document.getElementById('exp-btn-ig');if(ig)ig.textContent=t.ig;
   }
   const heroTexts = {
-    es: {badge:'🏔️ Patagonia · Bariloche', title:'Bariloche<br>Experiencias', sub:'Tu guía completa'},
-    en: {badge:'🏔️ Patagonia · Bariloche', title:'Bariloche<br>Experiences',  sub:'Your complete guide'},
-    pt: {badge:'🏔️ Patagônia · Bariloche', title:'Bariloche<br>Experiências', sub:'Seu guia completo'}
+    es: {badge:'🏔️ Patagonia · Bariloche', title:'Bariloche<br>Experiencias'},
+    en: {badge:'🏔️ Patagonia · Bariloche', title:'Bariloche<br>Experiences'},
+    pt: {badge:'🏔️ Patagônia · Bariloche', title:'Bariloche<br>Experiências'}
   };
   const ht = heroTexts[lang];
   const hb = document.getElementById('hero-badge'); if(hb) hb.textContent = ht.badge;
   const hh = document.getElementById('hero-title'); if(hh) hh.innerHTML = ht.title;
-  const hs = document.getElementById('hero-sub');   if(hs) hs.textContent = ht.sub;
   const waFloatText={es:'Contactanos',en:'Contact us',pt:'Fale conosco'};
   const wft=document.getElementById('wa-float-text');if(wft)wft.textContent=waFloatText[lang];
   const footerMsg={es:'Contactanos por cualquier duda — respondemos rápido 🙌',en:'Contact us for anything — we reply fast 🙌',pt:'Entre em contato com qualquer dúvida — respondemos rápido 🙌'};
