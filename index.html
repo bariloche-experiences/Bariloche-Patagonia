@@ -125,14 +125,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .tip-emoji{font-size:16px;flex-shrink:0;margin-top:1px}
 .tip-text{font-size:13px;color:#e2e8f0;line-height:1.5}
 .tip-text strong{color:#fde68a}
-.season-row{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid #21262d;align-items:flex-start}
-.season-row:last-child{border-bottom:none}
-.season-badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:8px;white-space:nowrap;flex-shrink:0}
-.season-badge.inv{background:rgba(147,197,253,0.15);color:#bfdbfe;border:1px solid rgba(147,197,253,0.3)}
-.season-badge.ver{background:rgba(16,185,129,0.15);color:#6ee7b7;border:1px solid rgba(16,185,129,0.3)}
-.season-badge.oto{background:rgba(245,158,11,0.15);color:#fde68a;border:1px solid rgba(245,158,11,0.3)}
-.season-badge.pri{background:rgba(244,114,182,0.15);color:#fbcfe8;border:1px solid rgba(244,114,182,0.3)}
-.season-text{font-size:13px;color:#e2e8f0;line-height:1.5}
 .extras-tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:1rem}
 .extras-tabs::-webkit-scrollbar{display:none}
 .ext-tab{background:#161b22;border:1px solid #374151;color:#cbd5e1;font-size:14px;font-weight:600;padding:10px 18px;border-radius:20px;cursor:pointer;white-space:nowrap;transition:all 0.2s;flex-shrink:0}
@@ -367,10 +359,25 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="rule-text" data-lang="en"><strong>No smoking inside the apartment.</strong> You can smoke outside.</div>
     <div class="rule-text" data-lang="pt"><strong>Não fumar dentro do apartamento.</strong> Pode fumar do lado de fora.</div>
   </div>
-  <div class="rule-card" style="background:rgba(0,0,0,0.2);border-color:rgba(16,185,129,0.2);margin-bottom:0"><div class="rule-icon">🗑️</div>
+  <div class="rule-card" style="background:rgba(0,0,0,0.2);border-color:rgba(16,185,129,0.2)"><div class="rule-icon">🗑️</div>
     <div class="rule-text active" data-lang="es"><strong>Sacar la basura en bolsa cerrada</strong> y dejarla afuera, en el cesto de la derecha.</div>
     <div class="rule-text" data-lang="en"><strong>Take the trash out in a closed bag</strong> and leave it outside, in the bin on the right.</div>
     <div class="rule-text" data-lang="pt"><strong>Leve o lixo em saco fechado</strong> e deixe do lado de fora, na lixeira da direita.</div>
+  </div>
+  <div class="rule-card" style="background:rgba(0,0,0,0.2);border-color:rgba(16,185,129,0.2)"><div class="rule-icon">🎉</div>
+    <div class="rule-text active" data-lang="es"><strong>No se permiten fiestas ni eventos</strong> en el departamento.</div>
+    <div class="rule-text" data-lang="en"><strong>Parties and events are not allowed</strong> in the apartment.</div>
+    <div class="rule-text" data-lang="pt"><strong>Não são permitidas festas ou eventos</strong> no apartamento.</div>
+  </div>
+  <div class="rule-card" style="background:rgba(0,0,0,0.2);border-color:rgba(16,185,129,0.2)"><div class="rule-icon">🔇</div>
+    <div class="rule-text active" data-lang="es"><strong>Horario de silencio a partir de las 22:30</strong> — por respeto a los vecinos.</div>
+    <div class="rule-text" data-lang="en"><strong>Quiet hours after 10:30 PM</strong> — out of respect for the neighbors.</div>
+    <div class="rule-text" data-lang="pt"><strong>Horário de silêncio a partir das 22h30</strong> — por respeito aos vizinhos.</div>
+  </div>
+  <div class="rule-card" style="background:rgba(0,0,0,0.2);border-color:rgba(16,185,129,0.2);margin-bottom:0"><div class="rule-icon">👥</div>
+    <div class="rule-text active" data-lang="es"><strong>Respetar la cantidad de huéspedes reservada</strong> — no se admiten visitas ni huéspedes adicionales no acordados.</div>
+    <div class="rule-text" data-lang="en"><strong>Please respect the booked number of guests</strong> — no additional visitors or guests without prior agreement.</div>
+    <div class="rule-text" data-lang="pt"><strong>Respeitar a quantidade de hóspedes reservada</strong> — não são permitidas visitas ou hóspedes adicionais sem combinar antes.</div>
   </div>
 </div>
 
@@ -618,7 +625,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <button class="ext-tab" onclick="setExt('colectivos')">🚌 <span class="t" data-es="Colectivos" data-en="Buses" data-pt="Ônibus">Colectivos</span></button>
     <button class="ext-tab" onclick="setExt('supers')">🛒 <span class="t" data-es="Súpers" data-en="Supermarkets" data-pt="Supermercados">Súpers</span></button>
     <button class="ext-tab" onclick="setExt('tips')">🧠 <span class="t" data-es="Tips locales" data-en="Local tips" data-pt="Dicas locais">Tips locales</span></button>
-    <button class="ext-tab" onclick="setExt('temporadas')">🍂 <span class="t" data-es="Temporadas" data-en="Seasons" data-pt="Estações">Temporadas</span></button>
     <button class="ext-tab" onclick="setExt('ski')">⛷️ Ski & Snow</button>
     <button class="ext-tab" onclick="setExt('emergencias')">🆘 <span class="t" data-es="Emergencias" data-en="Emergencies" data-pt="Emergências">Emergencias</span></button>
   </div>
@@ -663,16 +669,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="bus-row"><div class="bus-num">72</div><div class="bus-dest">Aeropuerto ↔ Terminal<span class="t" data-es="Traslado desde/hacia el aeropuerto" data-en="Transfer to/from the airport" data-pt="Transfer de/para o aeroporto">Traslado desde/hacia el aeropuerto</span></div></div>
     </div>
     <a class="service-btn blue" style="display:flex;align-items:center;justify-content:center;gap:7px;padding:11px;border-radius:10px;font-size:13px;font-weight:700;text-decoration:none;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.3);color:#93c5fd;margin-top:0" href="https://bariloche.org/transporte-publico/" target="_blank"><span class="t" data-es="Ver horarios completos · bariloche.org" data-en="Full timetable · bariloche.org" data-pt="Horários completos · bariloche.org">Ver horarios completos · bariloche.org</span></a>
-  </div>
-
-  <!-- TEMPORADAS -->
-  <div class="ext-group" id="ext-temporadas">
-    <div class="service-card">
-      <div class="season-row"><div class="season-badge inv">❄️ <span class="t" data-es="Invierno" data-en="Winter" data-pt="Inverno">Invierno</span><br>Jun–Sep</div><div class="season-text"><span data-lang="es" class="active">La temporada estrella. Nieve en los cerros, ski y snowboard en Catedral. Ambiente vibrante. Reservar todo con anticipación. Temperatura: -5°C a 10°C.</span><span data-lang="en">The star season. Snow on the mountains, ski and snowboard at Catedral. Vibrant atmosphere. Book everything in advance. Temperature: -5°C to 10°C.</span><span data-lang="pt">A temporada estrela. Neve nos cerros, esqui e snowboard em Catedral. Ambiente vibrante. Reserve tudo com antecedência. Temperatura: -5°C a 10°C.</span></div></div>
-      <div class="season-row"><div class="season-badge ver">☀️ <span class="t" data-es="Verano" data-en="Summer" data-pt="Verão">Verano</span><br>Dic–Mar</div><div class="season-text"><span data-lang="es" class="active">Playas del lago, trekking, kayak y piletas naturales. Días largos, 20–30°C. La mejor época para el Circuito Chico, Tronador y excursiones lacustres.</span><span data-lang="en">Lake beaches, trekking, kayak and natural pools. Long days, 20–30°C. The best season for Circuito Chico, Tronador and lake excursions.</span><span data-lang="pt">Praias do lago, trekking, caiaque e piscinas naturais. Dias longos, 20–30°C. A melhor época para o Circuito Chico, Tronador e excursões lacustres.</span></div></div>
-      <div class="season-row"><div class="season-badge oto">🍂 <span class="t" data-es="Otoño" data-en="Autumn" data-pt="Outono">Otoño</span><br>Mar–May</div><div class="season-text"><span data-lang="es" class="active">Los bosques se tiñen de rojo y naranja — uno de los paisajes más fotografiados de la Patagonia. Poca gente, precios más bajos y clima templado.</span><span data-lang="en">The forests turn red and orange — one of Patagonia's most photographed landscapes. Few tourists, lower prices and mild weather.</span><span data-lang="pt">As florestas ficam vermelhas e laranjas — uma das paisagens mais fotografadas da Patagônia. Poucos turistas, preços mais baixos e clima ameno.</span></div></div>
-      <div class="season-row"><div class="season-badge pri">🌸 <span class="t" data-es="Primavera" data-en="Spring" data-pt="Primavera">Primavera</span><br>Sep–Nov</div><div class="season-text"><span data-lang="es" class="active">El lago en su máximo esplendor, flores silvestres y clima agradable. Temporada baja: más tranquilo, más barato e igualmente hermoso.</span><span data-lang="en">The lake at its most beautiful, wildflowers and pleasant weather. Low season: quieter, cheaper and equally stunning.</span><span data-lang="pt">O lago no seu esplendor máximo, flores silvestres e clima agradável. Baixa temporada: mais tranquilo, mais barato e igualmente lindo.</span></div></div>
-    </div>
   </div>
 
   <!-- TIPS LOCALES -->
